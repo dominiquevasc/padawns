@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+
+ <style>
+  
+ * {
+  margin: 0;
+  padding: 0;
+ }
+
+ .menu {
+  width: 100%;
+  height: 50px;
+  background: #B8860B;
+  font-family: 'Comic Sans MS';
+ }
+ 
+ .menu li a {
+  display:block;
+  color:#000000
+  text-decoration: none;
+
+}
+ .menu ul {
+  list-style: none;
+  position: relative;
+ }
+
+ .menu ul li {
+  width: 150px;
+  //background: tomato;
+  float: left;
+ }
+
+ .menu a {
+  background-color: #DAA520;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: 	#ffffff;
+ }
+
+ .menu a:hover {
+  background-color: #f4f4f4;
+  color: #555;
+ }
+
+ .menu ul ul {
+  position: absolute;
+  visibility: hidden;
+ }
+
+ .menu ul li:hover ul {
+  visibility: visible;
+ }
+
+ .menu ul ul li {
+  float: none;
+  border-bottom: solid 1px #ccc;
+ }
+
+ .menu ul ul li a {
+  background-color: #DEB887; 
+ }
+
+ label[for="bt_menu"] {
+  padding: 5px;
+  background-color: #222;
+  color: #fff;
+  font-family: 'Arial';
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: none;
+ }
+
+ #bt_menu {
+  display: none;
+ }
+
+ @media (max-width: 800px) {
+  label[for="bt_menu"] {
+   display: block;
+  }
+
+  #bt_menu:checked ~ .menu {
+   margin-left: 0;
+  }
+
+  .menu {
+   margin-top: 5px;
+   margin-left: -100%;
+   transition: all .4s;
+  }
+
+  .menu ul li {
+   width: 100%;
+   float: none;
+  }
+  .menu ul ul {
+   position: static;
+   overflow: hidden;
+   max-height: 0;
+   transition: all .8s;
+  }
+  .menu ul li:hover ul {
+   height: auto;
+   max-height: 200px;
+  }
+ }
+
+ </style>
+
+</head>
+<body background="teste2.jpg">
+
+ <input type="checkbox" id="bt_menu">
+ <label for="bt_menu">&#9776;</label>
+
+ <nav class="menu">
+  <ul>
+   <li><a href="#">Tela Inicial</a></li>
+   <li>
+    <a href="#">Tela 1</a>
+    <ul>
+     <li><a href="tabela.html">Tabela</a></li>
+     
+    </ul>
+   </li>
+   <li>
+    <a href="#">Tela 2</a>
+    <ul>
+     <li><a href="tabela2.html">Tabela</a></li>
+    
+    </ul>
+   <li>
+    <a href="#">Tela 3</a>
+    <ul>
+     <li><a href="tabela3.html">Tabela</a></li>
+  </ul>
+ </nav>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+ <style>
+  
+  *{
+  margin: 0;
+  padding: 0;
+ }
+
+ .menu {
+  width: 100%;
+  height: 53px;
+  background: #B8860B;
+  font-family: 'Comic Sans MS';
+ }
+
+ .menu ul {
+  list-style: none;
+  position: relative;
+ }
+
+ .menu ul li {
+  width: 150px;
+  //background: tomato;
+  float: Center;
+ }
+
+ .menu a {
+  background-color: #DAA520;
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
+ }
+
+ .menu a:hover {
+  background-color: #F5DEB3;
+  color: #555;
+ }
+
+ .menu ul ul {
+  position: absolute;
+  visibility: hidden;
+ }
+
+ .menu ul li:hover ul {
+  visibility: visible;
+ }
+
+ .menu ul ul li {
+  float: none;
+  border-bottom: solid 1px #ccc;
+ }
+
+ .menu ul ul li a {
+  background-color: #069; 
+ }
+
+ label[for="bt_menu"] {
+  padding: 5px;
+  background-color: #222;
+  color: #ffff;
+  font-family: 'Arial';
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  display: none;
+ }
+
+ #bt_menu {
+  display: none;
+ }
+
+ @media (max-width: 800px) {
+  label[for="bt_menu"] {
+   display: block;
+  }
+
+  #bt_menu:checked ~ .menu {
+   margin-left: 0;
+  }
+
+  .menu {
+   margin-top: 5px;
+   margin-left: -100%;
+   transition: all .4s;
+  }
+
+  .menu ul li {
+   width: 100%;
+   float: none;
+  }
+  .menu ul ul {
+   position: static;
+   overflow: hidden;
+   max-height: 0;
+   transition: all .8s;
+  }
+  .menu ul li:hover ul {
+   height: auto;
+   max-height: 200px;
+  }
+ }
+
+ </style>
+<body background="teste.jpeg"
+background=size:100%>
+ <nav class="menu">
+  <ul>
+   <li><a href="teste.html">Tela Inicial</a></li>
+</body>
+<table border="3"
+cellspacing="18">
+<bgcolor="#">
+<tr>
+<th><a href="#">POSTAGENS</a></th>
+
+<th><a href="https://jsonplaceholder.typicode.com/albums/9" target="_blank">ALBUNS</a></th>
+</th>
+
+<th><a href="#">TO-DOS</a></th>
+
+
+
+
+
+
+
+</table>
+
+
+</table>
